@@ -205,11 +205,47 @@ district_generator = {
 			}
 		}
 		modifier = {
-			factor = 3
+			weight = 1000
 			owner = {
 				has_monthly_income = {
 					resource = energy
 					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -20
 				}
 			}
 		}
@@ -423,6 +459,51 @@ district_mining = {
 			exists = owner
 			owner = {
 				is_lithoid_empire = yes
+			}
+		}
+		modifier = {
+			weight = 1000
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -20
+				}
 			}
 		}
 		modifier = {
@@ -646,6 +727,56 @@ district_farming = {
 				}
 			}
 		}
+		modifier = {
+			weight = 1000
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -20
+				}
+			}
+		}
 
 		modifier = {
 			factor = 10
@@ -814,6 +945,51 @@ district_generator_uncapped = {
 				has_monthly_income = {
 					resource = energy
 						value < 0
+				}
+			}
+		}
+		modifier = {
+			weight = 1000
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < -20
 				}
 			}
 		}
@@ -988,6 +1164,51 @@ district_mining_uncapped = {
 			exists = owner
 			owner = {
 				is_lithoid_empire = yes
+			}
+		}
+		modifier = {
+			weight = 1000
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < -20
+				}
 			}
 		}
 		modifier = {
@@ -1173,6 +1394,56 @@ district_farming_uncapped = {
 			owner = {
 				country_uses_food = no
 				NOT = { has_deficit = food }
+			}
+		}
+		modifier = {
+			weight = 1000
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -5
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -10
+				}
+			}
+		}
+		modifier = {
+			factor = 8
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -15
+				}
+			}
+		}
+		modifier = {
+			factor = 16
+			owner = {
+				country_uses_food = yes
+				has_monthly_income = {
+					resource = food
+					value < -20
+				}
 			}
 		}
 
