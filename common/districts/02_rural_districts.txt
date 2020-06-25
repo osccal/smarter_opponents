@@ -206,6 +206,7 @@ district_generator = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -463,6 +464,7 @@ district_mining = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				has_monthly_income = {
 					resource = minerals
@@ -729,6 +731,7 @@ district_farming = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				country_uses_food = yes
 				has_monthly_income = {
@@ -950,6 +953,7 @@ district_generator_uncapped = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -1168,6 +1172,7 @@ district_mining_uncapped = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				has_monthly_income = {
 					resource = minerals
@@ -1398,6 +1403,7 @@ district_farming_uncapped = {
 		}
 		modifier = {
 			weight = 1000
+			free_jobs > 2
 			owner = {
 				country_uses_food = yes
 				has_monthly_income = {
