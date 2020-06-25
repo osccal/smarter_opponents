@@ -592,7 +592,8 @@ district_rw_commercial = {
 		weight = 0
 
 		modifier = {
-			weight = 250
+			weight = 100
+			districts_build_district = yes
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -600,6 +601,60 @@ district_rw_commercial = {
 				}
 			}
 		}
+		modifier = {
+			weight = 100
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 200
+				}
+			}
+		}
+		modifier =  {
+			weight = 100
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_deficit = consumer_goods
+			}
+		}
+		modifier = {
+			weight = 1000
+			free_amenities < 0
+		}
+		modifier = {
+			factor = 10
+			free_amenities < -20
+		}
+		modifier = {
+			factor = 10
+			free_amenities < -15
+		}
+		modifier = {
+			factor = 10
+			free_amenities < -10
+		}
+		modifier = {
+			factor = 10
+			free_amenities < -5
+		}
+		modifier = {
+			factor = 10
+			free_amenities < 5
+		}
+		modifier = {
+			factor = 0
+			free_amenities > 10
+		}
+		
+		
 
 		modifier = {
 			factor = 0.01
@@ -716,6 +771,43 @@ district_rw_science = {
 				has_monthly_income = {
 					resource = consumer_goods
 					value > 50
+				}
+			}
+		}
+		modifier = {
+			weight = 250
+			free_jobs < 4
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_deficit = consumer_goods
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value = 40
 				}
 			}
 		}
@@ -880,9 +972,13 @@ district_rw_farming = {
 			owner = {
 				has_monthly_income = {
 					resource = food
-					value < 200
+					value < 50
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			free_jobs > 2
 		}
 
 		modifier = {
@@ -908,4 +1004,3 @@ district_rw_farming = {
 		}
 	}
 }
-
