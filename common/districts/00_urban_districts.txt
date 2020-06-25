@@ -133,6 +133,11 @@ district_city = {
 		weight = 0
 		modifier = {
 			weight = 100
+			districts_build_district = yes
+			free_housing < 2
+		}
+		modifier = {
+			weight = 100
 			planet = {
 				planet_devastation < 1
 				years_passed > 5
@@ -298,6 +303,11 @@ district_hive = {
 		}
 		modifier = {
 			weight = 100
+			districts_build_district = yes
+			free_housing < 2
+		}
+		modifier = {
+			weight = 100
 			num_free_districts = { type = district_mining value = 0 }
 			num_free_districts = { type = district_generator value = 0 }
 			num_free_districts = { type = district_farming value = 0 }
@@ -436,6 +446,11 @@ district_nexus = {
 					}
 				}
 			}
+		}
+		modifier = {
+			weight = 100
+			districts_build_district = yes
+			free_housing < 2
 		}
 		modifier = {
 			weight = 100
