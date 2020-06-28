@@ -97,13 +97,7 @@ buildings_build_building = {
 				is_pop_category = ruler
 			}
 		}#Prevent unemployed specialist/rulers and bio_trophies problems.
-		any_owned_pop = {
-			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
-			NOR = {
-				is_pop_category = specialist
-				is_pop_category = ruler
-			}
-		}#Prevent unemployed specialist/rulers and bio_trophies problems.
+		free_building_slots > 0
 	}
 	NAND = {
 		exists = owner
@@ -204,6 +198,7 @@ districts_build_district = {
 				}
 			}
 		}
+		free_housing < 2
 	}
 	NAND = {
 		exists = owner
