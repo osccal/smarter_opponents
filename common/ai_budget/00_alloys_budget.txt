@@ -10,7 +10,10 @@ alloys_expenditure_buffer = { # Buffer, will not be spent
 	category = buffer
 
 	potential = {
-		always = no
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
 	}
 
 	fraction = {
@@ -24,7 +27,12 @@ alloys_expenditure_ships = {
 	category = ships
 
 	potential = {
-		always = yes
+		OR = {
+			ai_colonize_plans = 0		# if the ai does not plan to colonize, it's free to use the alloys for other things
+			has_ai_expansion_plan = yes	# if the ai has an expansion plan it's likely to either meet other empires or space fauna. best to have some ships available
+			is_at_war = yes
+			highest_threat > 50			# a minor sanity check to ensure that the ai builds ships if it feels threatened
+		}
 	}
 
 	fraction = {
@@ -50,7 +58,29 @@ alloys_expenditure_ship_upgrades = {
 	category = ship_upgrades
 
 	potential = {
-		is_at_war = no
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+			highest_threat > 50			# a minor sanity check to ensure that the ai upgrades ships if it feels threatened
+			AND = {
+				years_passed < 50
+				has_resource = { type = alloys amount > 900 }	# still upgrade if at not war as long as you have enough alloys
+			}
+			AND = {
+				years_passed > 50
+				years_passed < 100
+				has_resource = { type = alloys amount > 1000 }	# still upgrade if at not war as long as you have enough alloys
+			}
+			AND = {
+				mid_game_years_passed > 0
+				has_resource = { type = alloys amount > 2000 }	# still upgrade if at not war as long as you have enough alloys
+			}
+			AND = {
+				end_game_years_passed > 0
+				has_resource = { type = alloys amount > 3000 }	# still upgrade if at not war as long as you have enough alloys
+			}
+			has_resource = { type = alloys amount > 4000 }
+		}
 	}
 
 	fraction = {
@@ -91,6 +121,10 @@ alloys_expenditure_starbases = {
 		NOT = {
 			is_country_type = fallen_empire
 		}
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
 	}
 
 	fraction = {
@@ -105,6 +139,10 @@ alloys_expenditure_starbases_fallen_empires = {
 
 	potential = {
 		is_country_type = fallen_empire
+		OR = {
+			ai_colonize_plans = 0
+			is_at_war = yes
+		}
 	}
 
 	fraction = {
@@ -119,12 +157,12 @@ alloys_expenditure_starbases_expand = {
 
 	potential = {
 		has_ai_expansion_plan = yes
-		highest_threat < 50
+		highest_threat < 50			# not sure how much 50 threat is exactly, but for now left at vanilla values
 		NOT = {
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 		}
-		has_resource = { type = influence amount > 75 }
+		# has_resource = { type = influence amount > 75 } 	# for the time being removed influence as it has caused issues with upgrades in the past
 	}
 
 	fraction = {
@@ -294,7 +332,7 @@ alloys_upkeep_buffer = {	# Buffer, will not be spent
 	}
 
 	fraction = {
-		weight = 0.3
+		weight = 0.1	# slightly smaller buffer from vanilla. No point in sitting on huge amounts of alloys
 	}
 }
 
