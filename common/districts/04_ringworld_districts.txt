@@ -139,6 +139,10 @@ district_rw_city = {
 			factor = 2
 			districts_build_district = yes
 		}
+		modifier = {
+			weight = 10000
+			free_housing < -1
+		}
 	}
 }
 
@@ -229,6 +233,10 @@ district_rw_hive = {
 		modifier = {
 			factor = 2
 			districts_build_district = yes
+		}
+		modifier = {
+			weight = 10000
+			free_housing < -1
 		}
 	}
 }
@@ -321,6 +329,10 @@ district_rw_nexus = {
 		modifier = {
 			factor = 2
 			districts_build_district = yes
+		}
+		modifier = {
+			weight = 10000
+			free_housing < -1
 		}
 	}
 }
@@ -450,10 +462,12 @@ district_rw_generator = {
 
 	ai_weight = {
 		weight = 0
-
+		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
 		modifier = {
 			weight = 250
-			districts_build_district = yes
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -590,10 +604,12 @@ district_rw_commercial = {
 
 	ai_weight = {
 		weight = 0
-
+		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
 		modifier = {
 			weight = 100
-			districts_build_district = yes
 			owner = {
 				has_monthly_income = {
 					resource = energy
