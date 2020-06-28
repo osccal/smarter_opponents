@@ -26,7 +26,7 @@ energy_expenditure_trade = {
 	potential = {
 		has_resource = { 
 			type = energy 
-			amount > 500
+			amount > 2500
 		}
 	}
 	
@@ -47,42 +47,72 @@ energy_expenditure_trade_deficit = {
 		}
 		OR = {
 			AND = {
-				has_monthly_income = {
-					resource = minerals
-					value < -1
-				}
+				has_deficit = minerals
 				has_resource = { 
 					type = minerals 
 					amount < 1000
 				}
 			}
 			AND = {
-				has_monthly_income = {
-					resource = food
-					value < -1
-				}
+				has_deficit = food
 				has_resource = { 
 					type = food 
 					amount < 500
 				}
 			}
 			AND = {
-				has_monthly_income = {
-					resource = consumer_goods
-					value < -1
-				}
+				has_deficit = consumer_goods
 				has_resource = { 
 					type = consumer_goods 
 					amount < 500
 				}
 			}
 			AND = {
-				has_monthly_income = {
-					resource = alloys
-					value < -1
-				}
+				has_deficit = alloys
 				has_resource = { 
 					type = alloys 
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = exotic_gases
+				has_resource = {
+					type = exotic_gases
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = rare_crystals
+				has_resource = {
+					type = rare_crystals
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = volatile_motes
+				has_resource = {
+					type = volatile_motes
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = sr_dark_matter
+				has_resource = {
+					type = sr_dark_matter
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = sr_living_metal
+				has_resource = {
+					type = sr_living_metal
+					amount < 500
+				}
+			}
+			AND = {
+				has_deficit = sr_zro
+				has_resource = {
+					type = sr_zro
 					amount < 500
 				}
 			}
@@ -239,9 +269,14 @@ energy_expenditure_decisions = {
 		weight = 0.20
 	}
 
+	#Terraforming
+	static_min = {
+		base = 10000
+	}
+
 	# based on mastery of nature decision
 	static_max = {
-		base = 2000
+		base = 10000
 	}
 }
 
