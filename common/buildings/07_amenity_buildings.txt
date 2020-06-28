@@ -92,9 +92,20 @@ building_luxury_residence = {
 			free_district_slots = 0 #Do not build when city districts can still be built
 		}
 		modifier = {
+			weight = 100000
+			free_housing <= 1
+			free_jobs > 1 #prevents spamming of residence buildings when no jobs are open
+			free_district_slots = 0
+		} 	# If the ai is out of district slots and has more jobs than housing, add a residence
+		modifier = {
+			factor = 1000
+			free_housing < 0
+			free_jobs > 1 #prevents spamming of residence buildings when no jobs are open
+			free_district_slots = 0
+		}	# Force the AI to get a move on if it is out of housing and still hasnt started one
+		modifier = {
 			factor = 0
-			has_building = building_luxury_residence
-			owner = { has_technology = tech_paradise_dome }
+			free_jobs < 1
 		}
 	}
 }
@@ -189,6 +200,22 @@ building_paradise_dome = {
 		modifier = {
 			factor = 10
 			free_housing < 0
+		}
+		modifier = {
+			weight = 100000
+			free_housing <= 1
+			free_jobs > 1 #prevents spamming of residence buildings when no jobs are open
+			free_district_slots = 0
+		} 	# If the ai is out of district slots and has more jobs than housing, add a residence
+		modifier = {
+			factor = 1000
+			free_housing < 0
+			free_jobs > 1 #prevents spamming of residence buildings when no jobs are open
+			free_district_slots = 0
+		}	# Force the AI to get a move on if it is out of housing and still hasnt started one
+		modifier = {
+			factor = 0
+			free_jobs < 1
 		}
 	}
 }

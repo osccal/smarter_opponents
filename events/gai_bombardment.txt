@@ -1,0 +1,39 @@
+namespace = gai_bombardment
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+
+event = {
+	id = gai_bombardment.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		IF = {
+			limit = {
+				any_ship = { is_ship_class = shipclass_military }
+			}
+			IF = {
+				limit = { owner = { has_policy_flag = orbital_bombardment_selective } }
+				set_fleet_bombardment_stance = selective
+			}
+			IF = {
+				limit = { owner = { has_policy_flag = orbital_bombardment_indiscriminate } }
+				set_fleet_bombardment_stance = indiscriminate
+			}
+			IF = {
+				limit = { owner = { has_policy_flag = orbital_bombardment_armageddon } }
+				set_fleet_bombardment_stance = armageddon
+			}
+			IF = {
+				limit = { owner = {
+					OR = {
+						has_ascension_perk = ap_nihilistic_acquisition
+						has_valid_civic = civic_barbaric_despoilers
+					}
+				} }
+				set_fleet_bombardment_stance = raiding
+			}
+		}
+	}
+}

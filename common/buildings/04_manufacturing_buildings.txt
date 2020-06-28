@@ -173,11 +173,7 @@ building_foundry_1 = {
 			}
 		}
 		modifier = {
-			factor = 0
-			buildings_build_building = no
-		}
-		modifier = {
-			factor = 0.5
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {
@@ -350,7 +346,7 @@ building_foundry_2 = {
 			buildings_has_motes = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {
@@ -526,7 +522,7 @@ building_foundry_3 = {
 			buildings_has_motes = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {
@@ -689,10 +685,6 @@ building_factory_1 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			factor = 0
-			buildings_build_building = no
-		}
-		modifier = {
 			weight = 25
 			NOR = {
 				has_building = building_factory_1
@@ -722,7 +714,7 @@ building_factory_1 = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {
@@ -888,7 +880,7 @@ building_factory_2 = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {
@@ -1050,7 +1042,7 @@ building_factory_3 = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.05
 			free_jobs > 3
 		}
 		modifier = {

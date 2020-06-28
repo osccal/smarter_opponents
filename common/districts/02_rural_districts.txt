@@ -209,8 +209,21 @@ district_generator = {
 			}
 		}
 		modifier = {
+			factor = 10
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+
+		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -464,6 +477,18 @@ district_mining = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 10
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
 			factor = 1.25
 			exists = owner
 			owner = {
@@ -472,7 +497,7 @@ district_mining = {
 		}
 		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				has_monthly_income = {
 					resource = minerals
@@ -742,8 +767,20 @@ district_farming = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 10
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				country_uses_food = yes
 				has_monthly_income = {
@@ -958,6 +995,18 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
+			factor = 10
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
 			factor = 3
 			owner = {
 				has_monthly_income = {
@@ -968,7 +1017,7 @@ district_generator_uncapped = {
 		}
 		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				has_monthly_income = {
 					resource = energy
@@ -1182,6 +1231,18 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 10
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
 			factor = 1.25
 			exists = owner
 			owner = {
@@ -1190,7 +1251,7 @@ district_mining_uncapped = {
 		}
 		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				has_monthly_income = {
 					resource = minerals
@@ -1404,6 +1465,18 @@ district_farming_uncapped = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.5
+			districts_good_energy = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 10
+			districts_good_food = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
+		modifier = {
+			factor = 0.5
+			districts_good_minerals = yes
+		} # If the planet has a beneficial modifier, prioritise that distric here
 
 		modifier = {
 			factor = 0
@@ -1424,7 +1497,7 @@ district_farming_uncapped = {
 		}
 		modifier = {
 			weight = 1000
-			free_jobs > 2
+			free_jobs < 2
 			owner = {
 				country_uses_food = yes
 				has_monthly_income = {

@@ -7,8 +7,8 @@ early_default_plan = {
 
 	income = {
 		energy = 50
-		minerals = 200
-		alloys = 100
+		minerals = 60
+		alloys = 50
 		unity = 50
 
 		physics_research = 200
@@ -22,8 +22,8 @@ early_default_plan = {
 
 	focus = {
 		energy = 10
-		minerals = 30
-		alloys = 50
+		minerals = 50
+		alloys = 25
 	}
 
 	subplan = {
@@ -39,7 +39,7 @@ early_default_plan = {
 
 		focus = {
 			food = 10
-			consumer_goods = 20
+			consumer_goods = 10
 		}
 	}
 
@@ -54,7 +54,7 @@ early_default_plan = {
 		}
 
 		focus = {
-			consumer_goods = 20
+			consumer_goods = 10
 		}
 	}
 
@@ -70,12 +70,12 @@ early_default_plan = {
 		}
 
 		focus = {
-			food = 10
+			food = 20
 		}
 	}
 
-	pops = 500
-	empire_size = 1.25
+	pops = 5000
+	empire_size = 2
 
 	ai_weight = {
 		weight = 1
@@ -115,13 +115,13 @@ middle_default_plan = {
 		}
 
 		income = {
-			food = 100
+			food = 50
 			consumer_goods = 50
 		}
 
 		focus = {
-			food = 30
-			consumer_goods = 20
+			food = 10
+			consumer_goods = 10
 		}
 	}
 
@@ -148,16 +148,16 @@ middle_default_plan = {
 		}
 
 		income = {
-			food = 100
+			food = 50
 		}
 
 		focus = {
-			food = 30
+			food = 20
 		}
 	}
 
-	pops = 1000
-	empire_size = 1
+	pops = 5000
+	empire_size = 1.25
 
 	ai_weight = {
 		weight = 1
@@ -197,13 +197,13 @@ end_default_plan = {
 		}
 
 		income = {
-			food = 100
+			food = 50
 			consumer_goods = 50
 		}
 
 		focus = {
-			food = 50
-			consumer_goods = 20
+			food = 10
+			consumer_goods = 10
 		}
 	}
 
@@ -218,7 +218,7 @@ end_default_plan = {
 		}
 
 		focus = {
-			consumer_goods = 20
+			consumer_goods = 10
 		}
 	}
 
@@ -230,16 +230,16 @@ end_default_plan = {
 		}
 
 		income = {
-			food = 100
+			food = 50
 		}
 
 		focus = {
-			food = 50
+			food = 20
 		}
 	}
 
-	pops = 1500
-	empire_size = 1
+	pops = 5000
+	empire_size = 1.1
 
 	ai_weight = {
 		weight = 1
@@ -283,13 +283,13 @@ ultimate_default_plan = {
 		}
 
 		income = {
-			food = 200
-			consumer_goods = 200
+			food = 50
+			consumer_goods = 50
 		}
 
 		focus = {
-			food = 50
-			consumer_goods = 50
+			food = 10
+			consumer_goods = 10
 		}
 	}
 
@@ -300,11 +300,11 @@ ultimate_default_plan = {
 		}
 
 		income = {
-			consumer_goods = 200
+			consumer_goods = 50
 		}
 
 		focus = {
-			consumer_goods = 50
+			consumer_goods = 10
 		}
 	}
 
@@ -316,16 +316,16 @@ ultimate_default_plan = {
 		}
 
 		income = {
-			food  = 200
+			food  = 50
 		}
 
 		focus = {
-			food = 50
+			food = 20
 		}
 	}
 
 	pops = 10000
-	empire_size = 1.5
+	empire_size = 1
 
 	ai_weight = {
 		weight = 0.5

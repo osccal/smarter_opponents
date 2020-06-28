@@ -100,9 +100,9 @@ influence_expenditure_stations = {
 		base = 75
 	}
 
-	# max is 2 jumps away
+	# max is 3 jumps away
 	static_max = {
-		base = 150
+		base = 225
 	}
 }
 
