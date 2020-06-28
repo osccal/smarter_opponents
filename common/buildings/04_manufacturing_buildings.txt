@@ -173,6 +173,10 @@ building_foundry_1 = {
 			}
 		}
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			factor = 0.5
 			free_jobs > 3
 		}
@@ -338,32 +342,47 @@ building_foundry_2 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 10
 			buildings_has_motes = yes
 		}
 		modifier = {
-			factor = 2
-			exists = owner
+			factor = 0.5
+			free_jobs > 3
+		}
+		modifier = {
+			factor = 1.5
 			owner = {
-				has_monthly_income = {
-					resource = alloys
-					value < 200
-				}
+				has_origin = origin_void_dwellers
 			}
 		}
 
 		modifier = {
 			weight = 100
+			free_amenities > 2 #Avoid running out of amenities
+			owner = {
+				AND = {
+					OR = {
+						has_monthly_income = {
+							resource = consumer_goods
+							value > 0
+						}
+
+						country_uses_consumer_goods = no
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 12
+					}
+				}
+			}
 			any_owned_pop = {
 				is_unemployed = yes
 				NOT = {
 					is_pop_category = ruler
-				}
-			}
-			owner = {
-				has_monthly_income = {
-					resource = minerals
-					value > 12
 				}
 			}
 		}
@@ -376,6 +395,23 @@ building_foundry_2 = {
 				}
 			}
 		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = alloys
+			}
+		}
+		modifier = {
+			weight = 500
+			has_building = building_foundry_1
+			free_jobs < 3
+			free_building_slots = 0
+		}#Upgrade
+		modifier = {
+			weight = 500
+			has_building = building_foundry_2
+			free_building_slots = 0
+		}#Repairs
 	}
 
 
@@ -482,19 +518,76 @@ building_foundry_3 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 10
 			buildings_has_motes = yes
 		}
 		modifier = {
-			factor = 2
-			exists = owner
+			factor = 0.5
+			free_jobs > 3
+		}
+		modifier = {
+			factor = 1.5
 			owner = {
-				has_monthly_income = {
-					resource = alloys
-					value < 200
+				has_origin = origin_void_dwellers
+			}
+		}
+
+		modifier = {
+			weight = 100
+			free_amenities > 2 #Avoid running out of amenities
+			owner = {
+				AND = {
+					OR = {
+						has_monthly_income = {
+							resource = consumer_goods
+							value > 0
+						}
+
+						country_uses_consumer_goods = no
+					}
+					has_monthly_income = {
+						resource = minerals
+						value > 12
+					}
+				}
+			}
+			any_owned_pop = {
+				is_unemployed = yes
+				NOT = {
+					is_pop_category = ruler
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 15
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = alloys
+			}
+		}
+		modifier = {
+			weight = 500
+			has_building = building_foundry_2
+			free_jobs < 3
+			free_building_slots = 0
+		}#Upgrade
+		modifier = {
+			weight = 500
+			has_building = building_foundry_3
+			free_building_slots = 0
+		}#Repairs
 	}
 
 	ai_resource_production = {
@@ -596,6 +689,10 @@ building_factory_1 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 25
 			NOR = {
 				has_building = building_factory_1
@@ -627,6 +724,30 @@ building_factory_1 = {
 		modifier = {
 			factor = 0
 			free_jobs > 3
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = consumer_goods
+			}
 		}
 	}
 
@@ -737,8 +858,62 @@ building_factory_2 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 3
 			buildings_has_crystals = yes
+		}
+		modifier = {
+			weight = 100
+			jobs_work_minerals_goods = no
+			buildings_has_crystals = yes
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 30
+				}
+				OR = {
+					country_uses_food = no
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+					has_resource = {
+						type = food
+						amount > 0
+					}
+				}#Check to see if consumer goods shortage is being caused by a food shortage.
+			}
+		}
+		modifier = {
+			factor = 0
+			free_jobs > 3
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = consumer_goods
+			}
 		}
 	}
 
@@ -845,8 +1020,62 @@ building_factory_3 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 3
 			buildings_has_crystals = yes
+		}
+		modifier = {
+			weight = 100
+			jobs_work_minerals_goods = no
+			buildings_has_crystals = yes
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 30
+				}
+				OR = {
+					country_uses_food = no
+					has_monthly_income = {
+						resource = food
+						value >= 0
+					}
+					has_resource = {
+						type = food
+						amount > 0
+					}
+				}#Check to see if consumer goods shortage is being caused by a food shortage.
+			}
+		}
+		modifier = {
+			factor = 0
+			free_jobs > 3
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = consumer_goods
+			}
 		}
 	}
 
@@ -938,14 +1167,17 @@ building_refinery = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 50
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
+			weight = 30
 			owner = {
 				has_monthly_income = {
 					resource = exotic_gases
-					value < 5
-				}
+					value < 3
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
 			}
-			buildings_build_building = yes
 		}
 		modifier = {
 			weight = 200
@@ -954,6 +1186,12 @@ building_refinery = {
 					resource = exotic_gases
 					value < 1
 				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = exotic_gases
 			}
 		}
 	}
@@ -1064,6 +1302,12 @@ building_chemical_plant = {
 					resource = volatile_motes
 					value < 0
 				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = volatile_motes
 			}
 		}
 	}
@@ -1181,6 +1425,12 @@ building_crystal_plant = {
 				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
 			}
 		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = rare_crystals
+			}
+		}
 	}
 
 	ai_resource_production = {
@@ -1254,8 +1504,11 @@ building_nanite_transmuter = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 10
-			buildings_build_building = yes
 			owner = {
 				has_monthly_income = {
 					resource = nanites
@@ -1263,6 +1516,34 @@ building_nanite_transmuter = {
 				}
 			}
 		}#Nothing else uses the monthly income but new starships. As such the only important check is the number of nanites coming into the country.
+		modifier = {
+			weight = 100
+			owner = {
+				has_resource = { type = nanites amount > 2000}
+				has_monthly_income = {
+					resource = nanites
+					value > 2
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = exotic_gases
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = rare_crystals
+			}
+		}
+		modifier = {
+			factor = 100
+			owner = {
+				has_deficit = volatile_motes
+			}
+		}
 	}
 
 	ai_resource_production = {
@@ -1338,6 +1619,10 @@ building_ministry_production = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
 			weight = 10
 			OR = {
 				has_building = building_foundry_1
@@ -1349,6 +1634,33 @@ building_ministry_production = {
 				has_building = building_factory_3
 			}
 		}#No reason to build before the factory and foundry are built
+		modifier = {
+			factor = 10
+			has_building = building_foundry_2
+		}
+		modifier = {
+			factor = 100
+			has_building = building_foundry_3
+		}
+		modifier = {
+			factor = 10
+			has_building = building_factory_2
+		}
+		modifier = {
+			factor = 100
+			has_building = building_factory_3
+		}
+		modifier = {
+			weight = 100
+			or = {
+				num_buildings = { type = building_foundry_1 value > 1 }
+				num_buildings = { type = building_foundry_2 value > 1 }
+				num_buildings = { type = building_foundry_3 value > 1 }
+				num_buildings = { type = building_factory_1 value > 1 }
+				num_buildings = { type = building_factory_2 value > 1 }
+				num_buildings = { type = building_factory_3 value > 1 }
+			}
+		}
 		modifier = {
 			weight = 1
 			free_building_slots = 0
