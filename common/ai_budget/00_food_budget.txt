@@ -66,7 +66,7 @@ food_expenditure_colonies_expand_tree = {
 	}
 
 	static_max = {
-		base = 1100
+		base = 2000
 	}
 }
 
@@ -92,7 +92,7 @@ food_expenditure_colonies_expand_rock_tree = {
 	}
 
 	static_max = {
-		base = 600
+		base = 2000
 	}
 }
 

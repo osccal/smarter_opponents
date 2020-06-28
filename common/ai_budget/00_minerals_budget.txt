@@ -14,7 +14,7 @@ minerals_expenditure_buffer = { # Buffer, will not be spent
 	}
 
 	fraction = {
-		weight = 0.05
+		weight = 0.2 # increased buffer to alleviate production slumps / consumption increases
 	}
 }
 

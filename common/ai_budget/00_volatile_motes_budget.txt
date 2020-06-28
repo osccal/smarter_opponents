@@ -11,7 +11,7 @@ volatile_motes_expenditure_edicts = {
 	category = edicts
 	
 	potential = {
-		always = yes
+		has_resource = { type = volatile_motes amount > 105 }
 	}
 	
 	fraction = {
@@ -54,7 +54,7 @@ volatile_motes_expenditure_upgrade = {
 	category = ship_upgrades
 	
 	potential = {
-		always = yes
+		has_resource = { type = volatile_motes amount > 105 }
 	}
 	
 	fraction = {

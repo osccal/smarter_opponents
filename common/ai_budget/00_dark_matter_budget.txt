@@ -11,7 +11,7 @@ dark_matter_expenditure_edicts = {
 	category = edicts
 	
 	potential = {
-		always = yes
+		has_resource = { type = sr_dark_matter amount > 105 }
 	}
 	
 	fraction = {
@@ -54,7 +54,7 @@ dark_matter_expenditure_upgrade = {
 	category = ship_upgrades
 	
 	potential = {
-		always = yes
+		has_resource = { type = sr_dark_matter amount > 105 }
 	}
 	
 	fraction = {

@@ -31,7 +31,7 @@ alloys_expenditure_ships = {
 			ai_colonize_plans = 0		# if the ai does not plan to colonize, it's free to use the alloys for other things
 			has_ai_expansion_plan = yes	# if the ai has an expansion plan it's likely to either meet other empires or space fauna. best to have some ships available
 			is_at_war = yes
-			highest_threat > 50			# a minor sanity check to ensure that the ai builds ships if it feels threatened
+			highest_threat > 20			# a minor sanity check to ensure that the ai builds ships if it feels threatened
 		}
 	}
 
@@ -61,7 +61,7 @@ alloys_expenditure_ship_upgrades = {
 		OR = {
 			ai_colonize_plans = 0
 			is_at_war = yes
-			highest_threat > 50			# a minor sanity check to ensure that the ai upgrades ships if it feels threatened
+			highest_threat > 20			# a minor sanity check to ensure that the ai upgrades ships if it feels threatened
 			AND = {
 				years_passed < 50
 				has_resource = { type = alloys amount > 900 }	# still upgrade if at not war as long as you have enough alloys

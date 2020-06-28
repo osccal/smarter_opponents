@@ -11,7 +11,7 @@ living_metal_expenditure_edicts = {
 	category = edicts
 	
 	potential = {
-		always = yes
+		has_resource = { type = sr_living_metal amount > 105 }
 	}
 	
 	fraction = {
@@ -54,7 +54,7 @@ living_metal_expenditure_upgrade = {
 	category = ship_upgrades
 	
 	potential = {
-		always = yes
+		has_resource = { type = sr_living_metal amount > 105 }
 	}
 	
 	fraction = {
