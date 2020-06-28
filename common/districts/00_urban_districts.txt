@@ -160,9 +160,8 @@ district_city = {
 			num_free_districts = { type = district_farming value = 0 }
 		}
 		modifier = {
-			weight = 1000
+			weight = 500
 			free_housing < 0
-			free_jobs > 2
 		}
 		modifier = {
 			factor = 2
