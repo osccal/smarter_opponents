@@ -97,9 +97,13 @@ buildings_build_building = {
 				is_pop_category = ruler
 			}
 		}#Prevent unemployed specialist/rulers and bio_trophies problems.
-		planet = {
-			free_building_slots > 0
+		AND = {
+			planet = {
+				free_building_slots > 0
+				has_building_construction = no
+			}
 		}
+		
 	}
 	NAND = {
 		exists = owner
