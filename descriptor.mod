@@ -7,4 +7,4 @@ tags={
 	"Gameplay"
 }
 name="Dregre's Smarter Opponents"
-supported_version="2.7.2"
+supported_version="2.7"
