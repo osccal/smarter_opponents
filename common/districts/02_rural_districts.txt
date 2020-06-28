@@ -126,6 +126,10 @@ district_generator = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 3
 			OR = {
 				free_jobs < 2
@@ -390,6 +394,10 @@ district_mining = {
 
 	ai_weight = {
 		weight = 0
+		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
 		modifier = {
 			weight = 3
 			OR = {
@@ -660,6 +668,10 @@ district_farming = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
 		weight = 0
 		modifier = {
 			weight = 3
@@ -930,8 +942,11 @@ district_generator_uncapped = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 250
-			districts_build_district = yes
 			OR = {
 				owner = {
 					has_monthly_income = {
@@ -1143,8 +1158,11 @@ district_mining_uncapped = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 300
-			districts_build_district = yes
 			owner = {
 				has_monthly_income = {
 					resource = food
@@ -1361,8 +1379,11 @@ district_farming_uncapped = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 250
-			districts_build_district = yes
 			owner = {
 				has_monthly_income = {
 					resource = food
