@@ -132,8 +132,11 @@ district_city = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 100
-			districts_build_district = yes
 			free_housing < 2
 		}
 		modifier = {
@@ -288,6 +291,10 @@ district_hive = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 100
 			planet = {
 				planet_devastation < 1
@@ -303,7 +310,6 @@ district_hive = {
 		}
 		modifier = {
 			weight = 100
-			districts_build_district = yes
 			free_housing < 2
 		}
 		modifier = {
@@ -434,6 +440,10 @@ district_nexus = {
 	ai_weight = {
 		weight = 0
 		modifier = {
+			factor = 0
+			districts_build_district = no
+		}
+		modifier = {
 			weight = 100
 			planet = {
 				planet_devastation < 1
@@ -449,7 +459,6 @@ district_nexus = {
 		}
 		modifier = {
 			weight = 100
-			districts_build_district = yes
 			free_housing < 2
 		}
 		modifier = {
