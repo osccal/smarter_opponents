@@ -198,6 +198,7 @@ districts_build_district = {
 				}
 			}
 		}
+		free_housing > 0
 	}
 	NAND = {
 		exists = owner
