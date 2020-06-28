@@ -161,6 +161,11 @@ district_city = {
 		}
 		modifier = {
 			weight = 1000
+			free_housing < 0
+			free_jobs > 2
+		}
+		modifier = {
+			factor = 2
 			free_housing < -1
 		}
 		modifier = {
