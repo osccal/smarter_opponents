@@ -68,7 +68,10 @@ rare_crystals_expenditure_trade = {
 	category = trade
 	
 	potential = {
-		always = yes
+		has_resource = {
+			type = rare_crystals
+			amount > 500
+		}
 	}
 	
 	fraction = {

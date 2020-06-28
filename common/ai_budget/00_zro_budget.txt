@@ -68,7 +68,10 @@ zro_expenditure_trade = {
 	category = trade
 	
 	potential = {
-		always = yes
+		has_resource = {
+			type = sr_zro
+			amount > 500
+		}
 	}
 	
 	fraction = {

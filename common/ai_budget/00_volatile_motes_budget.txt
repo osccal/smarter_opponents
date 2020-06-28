@@ -68,7 +68,10 @@ volatile_motes_expenditure_trade = {
 	category = trade
 	
 	potential = {
-		always = yes
+		has_resource = {
+			type = volatile_motes
+			amount > 500
+		}
 	}
 	
 	fraction = {
